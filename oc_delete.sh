@@ -1,7 +1,7 @@
 #!/bin/bash
 
 oc login
-for each in "templates" "bc" "builds" "routes" "pods" "dc" "se" "is";
+for each in "templates" "bc" "builds" "routes" "pods" "dc" "se" "is" "rc";
 	    do
 		for line in `oc get $each | awk '{ print $1 }' | grep -v "NAME"`;
 		do
